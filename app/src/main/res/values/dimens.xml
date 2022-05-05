@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_normal">12dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+
+    <dimen name="action_bar_height">50dp</dimen>
+    <dimen name="btnBackWidth">15dp</dimen>
+    <dimen name="btnBackHeight">24dp</dimen>
+    <dimen name="icSearchSize">15dp</dimen>
+    <dimen name="icFilterWidth">20dp</dimen>
+    <dimen name="icFilterHeight">25dp</dimen>
+    <dimen name="tvSizeHeader">20sp</dimen>
+    <dimen name="tvSizeNormal">14sp</dimen>
+    <dimen name="layoutCharWidth">35dp</dimen>
+    <dimen name="icNextWidth">15dp</dimen>
+    <dimen name="tvSizeBig">16sp</dimen>
+    <dimen name="btnRetryHeight">35dp</dimen>
+</resources>

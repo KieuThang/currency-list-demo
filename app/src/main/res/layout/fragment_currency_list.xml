@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        tools:context=".presentation.home.profile.FragmentProfile">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/actionbar_main" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_default"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <com.hometest.currencylistdemo.presentation.widgets.OpenSansRegularTextView
+                    android:id="@+id/btnRetry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btnRetryHeight"
+                    android:layout_marginHorizontal="@dimen/margin_default"
+                    android:background="@drawable/bg_round_grey"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_default"
+                    android:src="?attr/selectableItemBackground"
+                    android:text="@string/retry"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tvSizeNormal" />
+
+                <com.hometest.currencylistdemo.presentation.widgets.OpenSansRegularTextView
+                    android:id="@+id/tvError"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/failed_to_load_currency_information"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/tvSizeNormal" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

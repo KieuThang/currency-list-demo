@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_default">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/margin_default"
+            android:paddingVertical="@dimen/margin_medium"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/btnBackWidth"
+                android:layout_height="@dimen/btnBackHeight"
+                android:background="@drawable/ic_back"
+                android:padding="@dimen/margin_medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/viewIndicator"
+            android:layout_width="@dimen/margin_default"
+            android:layout_height="wrap_content" />
+
+        <com.hometest.currencylistdemo.presentation.widgets.OpenSansBoldTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="@string/currency_list"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tvSizeHeader" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="@dimen/icFilterWidth"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_default"
+            android:paddingVertical="@dimen/margin_small"
+            android:src="@drawable/ic_filter_normal" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="@dimen/margin_normal"
+            android:layout_toStartOf="@id/imgFilter"
+            android:background="@drawable/bg_edt_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/icSearchSize"
+                android:layout_height="@dimen/icSearchSize"
+                android:layout_marginVertical="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:src="@drawable/ic_search" />
+
+            <com.hometest.currencylistdemo.presentation.widgets.OpenSansRegularEdittext
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_to_search_currency"
+                android:imeOptions="actionDone"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="#B8B8B8"
+                android:textSize="@dimen/tvSizeNormal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
