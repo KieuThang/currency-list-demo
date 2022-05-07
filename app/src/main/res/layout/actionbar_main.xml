@@ -50,7 +50,7 @@
         android:layout_marginHorizontal="@dimen/margin_default">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgFilter"
+            android:id="@+id/btnSort"
             android:layout_width="@dimen/icFilterWidth"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
 
             android:layout_marginVertical="@dimen/margin_normal"
-            android:layout_toStartOf="@id/imgFilter"
+            android:layout_toStartOf="@id/btnSort"
             android:background="@drawable/bg_edt_search"
             android:gravity="center_vertical"
             android:orientation="horizontal">

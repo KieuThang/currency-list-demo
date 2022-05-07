@@ -6,7 +6,7 @@ import androidx.multidex.MultiDex
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class DemoApplication: Application() {
+class CurrencyDemoApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         MultiDex.install(this)
