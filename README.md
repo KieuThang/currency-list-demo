@@ -33,3 +33,7 @@ The Android Instrument test is divided into 2 parts
 - AssetUtilTest: testing for read file from Asset before writing to local database.
 - DemoViewModelTest: testing for read data from local database in the ViewModel class.
   ![alt text](https://github.com/KieuThang/currency-list-demo/blob/main/app/src/main/android_test_result.png?raw=true)
+  
+5. APK demo:
+   ![alt text](https://github.com/KieuThang/currency-list-demo/blob/main/app/src/main/currency-demo-debug-1.0.apk?raw=true)
+
