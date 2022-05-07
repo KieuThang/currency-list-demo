@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/CurrencyListFragment">
+    app:startDestination="@id/HomeFragment">
 
     <fragment
         android:id="@+id/CurrencyListFragment"
@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_currency_list">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/DetailCurrencyFragment" />
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/HomeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/DetailCurrencyFragment"
-        android:name="com.hometest.currencylistdemo.presentation.main.CurrencyDetailFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/HomeFragment"
+        android:name="com.hometest.currencylistdemo.presentation.main.HomeFragment"
+        android:label="@string/home_fragment"
+        tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/CurrencyListFragment" />
     </fragment>
 </navigation>

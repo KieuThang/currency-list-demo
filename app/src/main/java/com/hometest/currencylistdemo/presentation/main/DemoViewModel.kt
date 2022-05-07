@@ -24,11 +24,13 @@ class DemoViewModel @Inject constructor(private val currencyUseCase: CurrencyUse
     val currencyInfoListEvent: LiveData<Resource<ArrayList<CurrencyInfo>>>
         get() = _currencyInfoListEvent
 
-    private var searchText: String? = null
+    var searchText: String? = null
     var isSorted = false
-    private var currencyInfoList = ArrayList<CurrencyInfo>()
+    var currencyInfoList = ArrayList<CurrencyInfo>()
 
     fun setupData(context: Context) {
+        searchText = null
+        isSorted = false
         val isFirstTimeRunApp =
             SharePrefUtils.getBooleanValue(context, AppConstants.Prefs.DEFAULT_PREFS, AppConstants.Prefs.KEY_FIRST_TIME_RUN_APP, defaultValue = true)
         if (isFirstTimeRunApp) {

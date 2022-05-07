@@ -15,7 +15,7 @@ import com.hometest.currencylistdemo.presentation.common.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DemoActivity : BaseActivity(), ICurrencyListEventListener {
+class DemoActivity : BaseActivity(), IMainListEventListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -28,7 +28,12 @@ class DemoActivity : BaseActivity(), ICurrencyListEventListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupData()
+        findNavController(R.id.nav_host_fragment_content_main).addOnDestinationChangedListener { controller, destination, arguments ->
+            AppLog.d(AppConstants.TAG, "controller:$controller, destination:${destination.id}, arguments:$arguments")
+            if (destination.label == getString(R.string.currency_list)) {
+                setupData()
+            }
+        }
     }
 
     private fun setupData() {
@@ -36,9 +41,10 @@ class DemoActivity : BaseActivity(), ICurrencyListEventListener {
 
         viewModel.currencyInfoListEvent.observe(this) {
             val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
-            val currencyListFragment = navHostFragment?.childFragmentManager?.fragments?.get(0) as CurrencyListFragment? ?: return@observe
-
-            currencyListFragment.setCurrencyList(it.data, viewModel.isSorted, this)
+            val currencyListFragment = navHostFragment?.childFragmentManager?.fragments?.get(0)
+            if (currencyListFragment is CurrencyListFragment) {
+                currencyListFragment.setCurrencyList(it.data, viewModel.isSorted, this)
+            }
         }
     }
 

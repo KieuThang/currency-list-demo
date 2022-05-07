@@ -2,7 +2,7 @@ package com.hometest.currencylistdemo.presentation.main
 
 import com.hometest.currencylistdemo.domain.model.CurrencyInfo
 
-interface ICurrencyListEventListener {
+interface IMainListEventListener {
     fun selectItem(currencyInfo: CurrencyInfo)
 
     fun refreshData()

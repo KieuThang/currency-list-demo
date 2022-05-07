@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:foreground="?attr/selectableItemBackground"
-    android:paddingHorizontal="@dimen/margin_default">
+    android:layout_height="?attr/actionBarSize"
+    android:foreground="?attr/selectableItemBackground">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/layoutChar"
+        android:layout_marginStart="@dimen/margin_default"
         android:layout_width="@dimen/layoutCharWidth"
         android:layout_height="@dimen/layoutCharWidth"
-        android:background="@drawable/bg_text_char"
         android:layout_centerVertical="true"
+        android:background="@drawable/bg_text_char"
         android:gravity="center">
 
         <com.hometest.currencylistdemo.presentation.widgets.OpenSansRegularTextView
@@ -18,7 +18,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="A"
             android:textColor="@android:color/white"
             android:textSize="@dimen/tvSizeBig" />
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -26,9 +25,10 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icNext"
         android:layout_width="@dimen/icNextWidth"
+        android:layout_marginEnd="@dimen/margin_medium"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:src="@drawable/ic_next" />
 
     <com.hometest.currencylistdemo.presentation.widgets.OpenSansRegularTextView
@@ -38,7 +38,6 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/margin_normal"
         android:layout_toStartOf="@id/icNext"
-        android:text="BTC"
         android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textSize="@dimen/tvSizeBig" />
@@ -51,8 +50,15 @@
         android:layout_marginHorizontal="@dimen/margin_normal"
         android:layout_toStartOf="@id/tvSymbol"
         android:layout_toEndOf="@id/layoutChar"
-        android:text="Bitcoin"
         android:textColor="@android:color/black"
         android:textSize="@dimen/tvSizeBig" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/layoutChar"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray" />
 </RelativeLayout>

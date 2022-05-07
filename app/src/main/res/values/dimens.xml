@@ -17,4 +17,6 @@
     <dimen name="icNextWidth">15dp</dimen>
     <dimen name="tvSizeBig">16sp</dimen>
     <dimen name="btnRetryHeight">35dp</dimen>
+    <dimen name="margin_big">20dp</dimen>
+    <dimen name="tv_welcome_margin_top">100dp</dimen>
 </resources>

@@ -18,4 +18,7 @@
     <string name="enter_to_search_currency">Enter text to search here</string>
     <string name="retry">Retry</string>
     <string name="you_select_currency">You selected %s</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="load_data">Load currency list</string>
+    <string name="welcome_to_application">Welcome to Currency Demo application</string>
 </resources>

@@ -28,7 +28,7 @@ class CurrencyListFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private var currencyList = ArrayList<CurrencyInfo>()
-    private var mListener: ICurrencyListEventListener? = null
+    private var mListener: IMainListEventListener? = null
     private var isSorted = false
 
     private var mAdapter: CurrencyAdapter? = null
@@ -89,7 +89,7 @@ class CurrencyListFragment : BaseFragment() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setCurrencyList(data: ArrayList<CurrencyInfo>?, isSorted: Boolean, listener: ICurrencyListEventListener) {
+    fun setCurrencyList(data: ArrayList<CurrencyInfo>?, isSorted: Boolean, listener: IMainListEventListener) {
         if (!isAdded) {
             return
         }
